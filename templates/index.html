@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>🎬 Công cụ Cắt Video Online</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap 5 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .card {
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            border-radius: 16px;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border-radius: 8px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            color: #999;
+            font-size: 0.9rem;
+        }
+
+        .form-label {
+            font-weight: 500;
+        }
+
+        .form-section {
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container py-5">
+        <div class="text-center mb-4">
+            <h1 class="fw-bold text-primary">🎬 Công Cụ Cắt Video</h1>
+            <p class="text-muted">Tải video lên và nhập thời gian bắt đầu / kết thúc để cắt đoạn mong muốn.</p>
+        </div>
+
+        <div class="card p-4 mx-auto" style="max-width: 600px;">
+            <form method="POST" enctype="multipart/form-data">
+                <div class="form-section">
+                    <label for="video" class="form-label">Chọn file video:</label>
+                    <input type="file" name="video" class="form-control" accept="video/*" required>
+                </div>
+
+                <div class="form-section">
+                    <label for="start" class="form-label">Thời gian bắt đầu <small>(hh:mm:ss)</small>:</label>
+                    <input type="text" name="start" class="form-control" placeholder="00:00:05" required>
+                </div>
+
+                <div class="form-section">
+                    <label for="end" class="form-label">Thời gian kết thúc <small>(hh:mm:ss)</small>:</label>
+                    <input type="text" name="end" class="form-control" placeholder="00:00:10" required>
+                </div>
+
+                <div class="d-grid mt-4">
+                    <button type="submit" class="btn btn-primary btn-lg">✂️ Cắt Video</button>
+                </div>
+            </form>
+        </div>
+
+        <footer class="mt-5">
+            © 2025 • Nam's Video Tool • All rights reserved
+        </footer>
+    </div>
+
+    <!-- Bootstrap JS (optional) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
